@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    -webkit-user-select: none; /* Para navegadores basados en WebKit */
+    -moz-user-select: none; /* Para navegadores basados en Gecko */
+    -ms-user-select: none; /* Para navegadores basados en Trident/EdgeHTML */
+    user-select: none; /* Para navegadores estándar */
+}
+
+.container {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0px 50px 10px 50px;
+    background: -webkit-linear-gradient(120deg, hsl(0, 71%, 35%), hsl(0, 3%, 6%));
+    text-align: center;
+}
+
+footer {
+    padding: 1rem 10rem 1rem 10rem;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+}
+
+.inicio {
+    text-align: center;
+}
+
+img#skull {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+img#skull:hover {
+    animation-name: buzz-out;
+    animation-duration: 0.8s;
+}
+
+@keyframes buzz-out {
+    0% { transform: rotate(0deg) scale(1, 1); }
+    10% { transform: rotate(7deg) scale(2, 2); }
+    20% { transform: rotate(-7deg) scale(2, 2); }
+    30% { transform: rotate(7deg) scale(2, 2); }
+    40% { transform: rotate(-7deg) scale(2, 2); }
+    50% { transform: rotate(7deg) scale(2, 2); }
+    60% { transform: rotate(-7deg) scale(2, 2); }
+    70% { transform: rotate(7deg) scale(2, 2); }
+    80% { transform: rotate(-7deg) scale(2, 2); }
+    90% { transform: rotate(7deg) scale(2, 2); }
+    100% { transform: rotate(0deg) scale(1, 1); }
+}
+
+
+p {
+    color: white;
+}
+
+/* TITULO CON EFECTO HOVER */
+
+h1 {
+    font-size: 6vw;
+    transition: 0.4s;
+    transform: translateX(0);
+    cursor: grab;
+    color: #ffffff;
+}
+
+h1:hover {
+    transform: translateY(-1rem);
+    background: -webkit-linear-gradient(120deg, hsl(0, 100%, 50%), hsl(56, 46%, 17%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+}
+
+#tituloE {
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    #titulo {
+        padding: 0 30px;
+        /* Reducimos el padding para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    #titulo {
+        padding: 0 20px;
+    }
+}
+
+
+/* JUEGOS CARDS */
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); /* Modifica el valor de minmax */
+    gap: 10px;
+    justify-items: center;
+}
+
+.card {
+    background-color: #2e222288;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    pointer-events: none;
+}
+
+.card h3 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+}
