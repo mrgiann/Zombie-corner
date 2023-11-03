@@ -3,5 +3,6 @@ Zombie Corner is a website that I started developing when I was in my early stag
 
 Visit: https://mrgiann.github.io/Zombie-corner/
 
-![image](https://github.com/mrgiann/Zombie-corner/assets/82038942/8821fdf9-d299-4a25-a94e-fe2e482fe7bf)
+![image](https://github.com/mrgiann/Zombie-corner/assets/82038942/14d3e4ce-905e-429b-a0da-f366290e4dc9)
+
 
