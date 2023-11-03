@@ -4,10 +4,14 @@ body {
     font-family: sans-serif;
     background-color: rgb(0, 0, 0);
     color: rgb(0, 0, 0);
-    -webkit-user-select: none; /* Para navegadores basados en WebKit */
-    -moz-user-select: none; /* Para navegadores basados en Gecko */
-    -ms-user-select: none; /* Para navegadores basados en Trident/EdgeHTML */
-    user-select: none; /* Para navegadores estándar */
+    -webkit-user-select: none;
+    /* Para navegadores basados en WebKit */
+    -moz-user-select: none;
+    /* Para navegadores basados en Gecko */
+    -ms-user-select: none;
+    /* Para navegadores basados en Trident/EdgeHTML */
+    user-select: none;
+    /* Para navegadores estándar */
 }
 
 .container {
@@ -24,6 +28,21 @@ footer {
     background-color: #000000;
     color: white;
 }
+
+.icono-hover {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icono-hover:hover {
+    transform: translateY(-5px);
+}
+
+.icono-hover i.fa-github {
+    font-size: 30px;
+}
+
 
 .inicio {
     text-align: center;
@@ -42,22 +61,64 @@ img#skull:hover {
 }
 
 @keyframes buzz-out {
-    0% { transform: rotate(0deg) scale(1, 1); }
-    10% { transform: rotate(7deg) scale(2, 2); }
-    20% { transform: rotate(-7deg) scale(2, 2); }
-    30% { transform: rotate(7deg) scale(2, 2); }
-    40% { transform: rotate(-7deg) scale(2, 2); }
-    50% { transform: rotate(7deg) scale(2, 2); }
-    60% { transform: rotate(-7deg) scale(2, 2); }
-    70% { transform: rotate(7deg) scale(2, 2); }
-    80% { transform: rotate(-7deg) scale(2, 2); }
-    90% { transform: rotate(7deg) scale(2, 2); }
-    100% { transform: rotate(0deg) scale(1, 1); }
+    0% {
+        transform: rotate(0deg) scale(1, 1);
+    }
+
+    10% {
+        transform: rotate(7deg) scale(2, 2);
+    }
+
+    20% {
+        transform: rotate(-7deg) scale(2, 2);
+    }
+
+    30% {
+        transform: rotate(7deg) scale(2, 2);
+    }
+
+    40% {
+        transform: rotate(-7deg) scale(2, 2);
+    }
+
+    50% {
+        transform: rotate(7deg) scale(2, 2);
+    }
+
+    60% {
+        transform: rotate(-7deg) scale(2, 2);
+    }
+
+    70% {
+        transform: rotate(7deg) scale(2, 2);
+    }
+
+    80% {
+        transform: rotate(-7deg) scale(2, 2);
+    }
+
+    90% {
+        transform: rotate(7deg) scale(2, 2);
+    }
+
+    100% {
+        transform: rotate(0deg) scale(1, 1);
+    }
 }
 
+.container p {
+    text-align: center;
+    color: white;
+    margin-top: 0;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
 
 p {
     color: white;
+    font-size: 1.1rem;
 }
 
 /* TITULO CON EFECTO HOVER */
@@ -82,7 +143,11 @@ h1:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 50px 0;
+}
+
+#titulo h1{
+    margin-bottom: 10px;
 }
 
 #tituloE {
@@ -92,7 +157,6 @@ h1:hover {
 @media (max-width: 768px) {
     #titulo {
         padding: 0 30px;
-        /* Reducimos el padding para pantallas más pequeñas */
     }
 }
 
@@ -107,17 +171,24 @@ h1:hover {
 
 .container-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr)); /* Modifica el valor de minmax */
+    grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
     gap: 10px;
     justify-items: center;
 }
 
 .card {
+    position: relative;
     background-color: #2e222288;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: rotateY(20deg);
 }
 
 .card img {
@@ -133,4 +204,18 @@ h1:hover {
     font-size: 18px;
     color: white;
     margin-bottom: 5px;
+}
+
+.inactive-card {
+    background-color: rgb(163, 23, 23);
+    transform: rotateX(0) rotateY(0);
+}
+
+/* Media query para hacer responsive */
+@media (max-width: 768px) {
+
+    .card img {
+        width: 300px;
+    height: 350px;
+    }
 }
